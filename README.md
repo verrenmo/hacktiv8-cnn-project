@@ -1,4 +1,4 @@
-Hacktiv8 - Graded Challenge Project
+**Hacktiv8 - Graded Challenge Project**
 
 - by Verren Monica
 - Phase 2
