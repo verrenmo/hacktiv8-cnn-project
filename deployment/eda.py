@@ -25,92 +25,82 @@ def run():
     # Add text
     st.write('by **Verren Monica**\n\n*Hacktiv8 - Full Time Data Science - Batch RMT-038 - Graded Challenge 7 Project*')
     st.write('')
-    st.write('Halaman ini berisi mengenai Exploratory Data Analysis (EDA) mengenai car vs bike dataset.')
+    st.write('This page contains Exploratory Data Analysis (EDA) about Car and Bike Dataset.')
     st.write('Dataset source: [click here](https://www.kaggle.com/datasets/utkarshsaxenadn/car-vs-bike-classification-dataset/data)')
 
     # Subheader
-    st.subheader("Penjabaran EDA")
-    # Menampilkan 75 gambar bike
+    st.subheader("Explanation of EDA")
+    # Display 75 images of bike
     bikeFolder = "Car-Bike-Dataset/Bike"
-    st.write("Berikut adalah 75 gambar dari dataset bike:")
+    st.write("Here are 75 images from the bike dataset:")
     st.image("eda1.png")
     st.image("eda2.png")
     st.image("eda3.png")
 
-    # Narasi mengenai analisa bike
+    # Bike image analysis
     st.write("""
-    Berdasarkan sumber yang saya baca ([Mengenal 8 Jenis Sepeda Motor](https://www.inews.id/otomotif/motor/mengenal-8-jenis-sepeda-motor-dari-model-skuter-hingga-touring/2)), ada 8 jenis sepeda motor yaitu:
-    1. Motor bebek (cub)
-    2. Skuter
-    3. Dual-Sport
-    4. Naked Bike
-    5. Sport Bike
-    6. Retro
-    7. Cruiser
-    8. Touring
+    Based on the source I read ([Understanding 8 Types of Motorcycles](https://www.inews.id/otomotif/motor/mengenal-8-jenis-sepeda-motor-dari-model-skuter-hingga-touring/2)), there are 8 types of motorcycles:  
+    1. Cub 
+    2. Scooter  
+    3. Dual-Sport  
+    4. Naked Bike  
+    5. Sport Bike  
+    6. Retro  
+    7. Cruiser  
+    8. Touring  
 
-    Jika dilihat dari 75 gambar dalam kategori bikes yang ditampilkan diatas, ditemukan bahwa gambar sepeda motor dalam dataset di dominasi oleh tipe Dual-Sport, Naked Bike, Sport Bike, Retro, Cruiser dan Touring. 
-    Tidak ada gambar sepeda motor yang ditampilkan yang masuk ke dalam tipe Motor Bebek dan Skuter. 
-    Model kemungkinan akan belajar lebih banyak gambar mengenai bentuk sepeda motor selain Motor Bebek dan Skuter.
-             
-    Dari segi warna, banyak sepeda motor dalam gambar yang dominan dengan warna hitam, putih, merah, biru. 
-    Ditemukan pula bahwa dalam sebuah motor dapat mengandung 2 warna seperti merah dan hitam, biru dan hitam atau putih dan hitam.
+    Based on the 75 images in the bike category displayed above, it was found that the motorcycle images in the dataset are dominated by Dual-Sport, Naked Bike, Sport Bike, Retro, Cruiser, and Touring types. There are no images of motorcycles belonging to the Cub or Scooter types. The model is likely to learn more from images of motorcycle shapes other than Cub and Scooter types.
 
-    Selain itu, sudut pengambilan gambar dalam kategori bikes cukup variatif, ada yang memperlihatkan tampak depan, tampak samping (kanan dan kiri), tampak depan dan samping serta tampak belakang sepeda motor. 
-    Hal ini memungkinkan model untuk belajar bentuk sepeda motor dari beberapa angle. Namun, ada beberapa gambar yang tampak terlalu jauh dari kamera pengambilan gambar hal ini dapat membuat model kesulitan untuk mengenali gambar sepeda motor.
+    In terms of color, many motorcycles in the images are dominated by black, white, red, and blue. It was also found that a motorcycle can contain two colors, such as red and black, blue and black, or white and black.
 
-    Dari beberapa gambar dalam kategori bikes yang ditampilkan ditemukan beberapa karakeristik lainnya seperti:
-    - Beberapa gambar hanya menampilkan sebagian bagian dari sepeda motor seperti di bagian depan motor, bagian belakang motor dan tampak depan motor.
-    - Beberapa gambar dalam dataset ada yang tidak memiliki background (hanya warna putih), ada yang dengan background jalan, pemandangan rumput yang luas, suasana arena balapan, halaman rumah dan bahkan dengan background suasana di dalam gedung seperti pameran.
-    - Beberapa gambar sepeda motor ada yang diambil saat sedang dikendarai oleh manusia, diambil dengan foto seorang model dan ada yang hanya gambar sepeda motor tanpa gambar manusia.
-    - Beberapa gambar sepertinya ada yang diambil dengan tujuan komersial dan ada yang memang hanya diambil untuk kebutuhan dokumentasi.
-    - Bebreapa gambar memiliki lebih dari 1 sepeda motor di dalamnya.
+    Additionally, the angles of the images in the bike category are quite varied, including front views, side views (right and left), front and side views, and rear views of motorcycles. This allows the model to learn the shape of motorcycles from multiple angles. However, some images are taken from a considerable distance from the camera, which may make it difficult for the model to recognize motorcycles.
 
-    Hal ini memungkinkan model belajar mengenali bentuk sepeda motor dengan berbagai macam background dan kondisi. Namun juga dapat membuat model kesulitan mengenali gambar jika hanya bagian tertentu saja yang ada pada gambar.
+    From some images in the bike category displayed, the following characteristics were also found:  
+    - Some images only show partial parts of motorcycles, such as the front, rear, or side.  
+    - Some images in the dataset have no background (only white), while others feature road backgrounds, expansive grassy views, racetrack environments, house yards, or even indoor exhibition settings.  
+    - Some images show motorcycles being ridden by people, taken with a model, or only show the motorcycle without people.  
+    - Some images appear to be taken for commercial purposes, while others seem to be for documentation.  
+    - Some images contain more than one motorcycle.  
+
+    These characteristics allow the model to learn to recognize motorcycle shapes in various backgrounds and conditions. However, it may also make it challenging for the model to recognize images if only certain parts of the motorcycle are visible in the image.    
     """)
 
-    # Menampilkan 75 gambar car
+    # Display 75 images of car
     carFolder ="Car-Bike-Dataset/Car"
-    st.write("Berikut adalah 75 gambar dari dataset car:")
+    st.write("Here are 75 images from the bike dataset car:")
     st.image("eda4.png")
     st.image("eda5.png")
     st.image("eda6.png")
 
-    # Narasi mengenai analisa bike
+    # Car images analysis
     st.write("""
-    Berdasarkan sumber yang saya baca ([Car Types](https://www.caranddriver.com/shopping-advice/g26100588/car-types/)), terdapat beberapa tipe mobil diantaranya adalah:
-    1. Sedan
-    2. Coupe
-    3. Sports Car
-    4. Station Wagon
-    5. Hatchback
-    6. Convertible
-    7. Sport-utility Vehicle (SUV)
-    8. Minivan
-    9. Pickup Truck
+    Based on the source I read ([Car Types](https://www.caranddriver.com/shopping-advice/g26100588/car-types/)), there are several types of cars, including:  
+    1. Sedan  
+    2. Coupe  
+    3. Sports Car  
+    4. Station Wagon  
+    5. Hatchback  
+    6. Convertible  
+    7. Sport-utility Vehicle (SUV)  
+    8. Minivan  
+    9. Pickup Truck  
 
-    Jika dilihat dari 75 gambar dalam kategori cars, ditemukan bahwa gambar mobil dalam dataset cukup mewakili tipe-tipe mobil yang disebutkan, kecuali tipe mobil pickup truck. 
-    Sehingga, model akan banyak belajar mengenai bentuk mobil dari tipe yang bermacam-macam, namun ketiadaan tipe mobil pickup truck mungkin akan membuat model kesulitan dalam mengenali object.
+    From the 75 images in the car category, it was found that the car images in the dataset fairly represent the mentioned car types, except for the pickup truck type. Thus, the model will learn a lot about the shapes of various car types, but the absence of the pickup truck type may make it difficult for the model to recognize the object.  
 
-    Dari segi warna, gambar mobil yang ada di dominasi dengan warna merah, putih, hitam, biru dan orange. Jarang sekali di temukan sebuah gambar mobil dengan kombinasi 2 warna (tidak seperti dalam gambar sepeda motor).
+    In terms of color, the car images are dominated by red, white, black, blue, and orange. It is very rare to find car images with a combination of two colors (unlike the motorcycle images).  
 
-    Selain itu, dari segi sudut pengambilan gambar sudah cukup variatif, ada mobil-mobil dengan tampak depan, tampak samping (kanan dan kiri), tampak belakang, tampak depan dan samping, dan tampak atas. 
-    Hal ini memungkinkan model untuk belajar mengenal object model dari berbagai macam sisi(angle). 
-    Namun, ada juga mobil yang jauh dari kamera pengambilan gambar yang mungkin akan menyebabkan model sulit mengenali bentuknya.
+    In addition, the angles of the images are quite varied, including front views, side views (right and left), rear views, front and side views, and top views. This allows the model to learn to recognize the object from various angles. However, some cars are far from the camera, which may make it difficult for the model to recognize their shapes.  
 
-    Dari beberapa gambar dalam kateori cars yang ditampilkan ditemukan beberapa karakeristik lainnya seperti:
-    - Beberapa gambar tidak memiliki background (hanya warna putih atau hitam saja), ada yang dengan background jalan, gedung, pemandangan, dan di dalam gedung dengan suasana pameran.
-    - Beberapa gambar diambil terlihat seperti sedang bergerak dan ada juga yang diambil pada saat ada manusia di dekat mobil.
-    - Beberapa gambar diambil sepertinya diambil untuk tujuan komersial dan ada pula yang diambil untuk dokumentasi.
+    From some images in the car category displayed, the following characteristics were found:  
+    - Some images have no background (only white or black), while others feature roads, buildings, scenic views, and indoor exhibition settings.  
+    - Some images appear to be taken with the car in motion, and some include humans near the car.  
+    - Some images seem to have been taken for commercial purposes, while others seem to be for documentation.  
 
-    Hal ini mendukung model untuk mempelajari bentuk mobil dengan berbagai macam background.
+    This supports the model in learning car shapes with various backgrounds.  
 
-    Secara keseluruhan, perbedaan yang dominan antara kategori bikes dan cars dalam dataset adalah bentuk objek. 
-    Objek dalam dataset cars memiliki dimensi yang lebih besar dibandingkan dengan objek dalam dataset bikes. 
-    Hal ini bisa mempengaruhi cara model computer vision mendeteksi dan mengenali objek, karena objek dengan dimensi yang lebih besar akan memiliki representasi visual yang berbeda, seperti ukuran pixel yang lebih besar dalam gambar.
+    Overall, the dominant difference between the bike and car categories in the dataset is the shape of the objects. Objects in the car category have larger dimensions compared to those in the bike category. This can affect how the computer vision model detects and recognizes objects, as larger objects will have a different visual representation, such as larger pixel sizes in the images.  
 
-    Selanjutnya, saya akan melakukan analisa ruang warna (color modes) pada dataset cars and bikes. Analisa ini dilakukan dengan tujuan menstandarkan input gambar ke model agar data gambar yang nantinya digunakan oleh model sehingga memiliki format yang konsisten dan mencegah terjadinya error.
-    """)
+    Next, I will perform a color mode analysis on the car and bike datasets. This analysis aims to standardize the image input for the model so that the image data used by the model later will have a consistent format and prevent errors.""")
 
     # Function to check color modes
     def listColorMode(folderPath):
@@ -124,37 +114,34 @@ def run():
     # Check color modes for every image in each category
     bikeModeList = listColorMode(bikeFolder)
     carModeList = listColorMode(carFolder)
-    st.write("Jenis color mode yang ada pada dataset bike: RGB, P, RGBA")
-    st.write("Jenis color mode yang ada pada dataset car: RGB, P, RGBA")
+    st.write("Types of color modes present in bike dataset bike: RGB, P, RGBA")
+    st.write("Types of color modes present in car dataset: RGB, P, RGBA")
     
     # Dataframe bike and car
-    st.write("Berikut adalah tabel dari beberapa gambar dengan label beserta keterangan color modesnya:")
+    st.write("Here is a table of several images with labels and descriptions of their color modes:")
     bikesDF = pd.DataFrame({'images':sorted(os.listdir(bikeFolder)), 'label':'bikes', 'colorModes':bikeModeList})
     carsDF = pd.DataFrame({'images':sorted(os.listdir(carFolder)), 'label': 'cars', 'colorModes':carModeList})
     df = pd.concat([bikesDF, carsDF]).reset_index(drop=True)
     df = df.sample(len(df), random_state = 26).reset_index(drop=True)
     st.dataframe(df)
 
-    # Jumlah color modes
-    st.write('Jumlah total masing-masing color mode:')
+    # The number of color modes
+    st.write('Total number of each color modes:')
     colorModes =["RGB", "RGBA", "P"]  
     count = [1982, 14, 4]
     dfColor = {"Color Modes": colorModes,
                "Count": count}
     st.dataframe(dfColor)
     st.write("""
-    Dari perhitungan diatas, diperoleh informasi bahwa ditemukan total 16 gambar dengan color modes RGBA atau 0.4% dari total data dan ditemukan 7 gambar dengan color modes P atau 0.175% dari total data. 
-    Sehingga 99.425% memiliki color modes RGB.
-             
-    Berdasarkan studi literatur yang saya lakukan, salah satu jurnal mengenai Color Spaces menyatakan bahwa hasil kualitatif dari pembuatan arsitektur yang penulis lakukan menunjukkan bahwa perhitungan loss sebaiknya dilakukan dalam ruang warna RGB.
-    
+    From the calculations above, it was found that there are a total of 16 images with color mode RGBA, which accounts for 0.4% of the total data, and 7 images with color mode P, which accounts for 0.175% of the total data. Therefore, 99.425% of the images have the RGB color mode.
+
+    Based on a literature review I conducted, one journal on Color Spaces states that the qualitative results of the architecture creation suggest that loss calculation should be done in the RGB color space.  
+
     Journal link: [Influence of Color Spaces for Deep Learning Image Colorization](https://arxiv.org/abs/2204.02850).
 
-    Karena data RGB yang tersedia sudah cukup banyak (99.425%). 
-    Maka, di proses feature engineering akan dilakukan penghapusan untuk image dengan color modes P dan RGBA. 
-    Sehingga, model akan belajar dengan gambar yang memiliki RGB color modes saja.
+    Since the available RGB data is quite abundant (99.425%), in the feature engineering process, images with P and RGBA color modes will be removed. This will ensure that the model only learns from images that have the RGB color mode.
 
-    Selanjutnya saya akan melakukan analisa mengenai ukuran dari file gambar yang ada dalam dataset.
+    Next, I will analyze the file sizes of the images in the dataset.
     """)
 
     # Function to check image size
@@ -170,35 +157,35 @@ def run():
     bikeSizes = checkImageSize(bikeFolder)
     carSizes = checkImageSize(carFolder)
 
-    # Mengubah ke DataFrame
+    # To DataFrame
     dfBikeSize = pd.DataFrame(list(bikeSizes), columns=["Width", "Height"])
-    st.write("Beberapa macam ukuran gambar pada dataset bike:")
+    st.write("Several types of image sizes in the bike dataset:")
     st.dataframe(dfBikeSize)
-    st.write("Ditemukan jumlah unique size pada dataset bike adalah sebanyak 307.")
+    st.write("The number of unique sizes found in the bike dataset is 307.")
 
-    # Mengubah ke DataFrame
+    # To DataFrame
     dfCarSize = pd.DataFrame(list(carSizes), columns=["Width", "Height"])
     st.write("")
-    st.write("Beberapa macam ukuran gambar pada dataset car:")
+    st.write("Several types of image sizes in the car dataset:")
     st.dataframe(dfCarSize)
-    st.write("Ditemukan jumlah unique size pada dataset car adalah sebanyak 231.")
+    st.write("The number of unique sizes found in the car dataset is 231.")
     st.write("""
-    Dari hasil perhitungan diatas, ditemukan bahwa image dalam dataset memiliki ukuran yang berbeda-beda. 
-    Untuk dataset Bike memiliki 307 ukuran yang berbeda dan untuk dataset Car memiliki 231 ukuran yang berbeda. 
-    Sehingga, pada proses feature engineering akan dilakukan resizing untuk menstandarkan ukuran gambar.      
-    Hal ini diperlukan agar input gambar konsisten, mengurangi beban komputasi, penyederhanaan gambar dan persiapan augmentasi.
+    From the calculations above, it was found that the images in the dataset have different sizes. 
+    For the Bike dataset, there are 307 different sizes, and for the Car dataset, there are 231 different sizes. 
+    Therefore, in the feature engineering process, resizing will be performed to standardize the image sizes. 
+    This is necessary to ensure consistent image input, reduce computational load, simplify the images, and prepare for augmentation.
     """)
 
     # Subheader
-    st.subheader("Kesimpulan EDA")
+    st.subheader("EDA Conclusion")
     st.write("""
-    Dari hasil EDA yang dilakukan, diperoleh informasi bahwa:
-    - Dataset yang dimiliki dominan dengan tipe sepeda motor selain skuter dan motor bebek sedangkan untuk dataset cars sudah cukup mewakili berbagai macam tipe dan bentuk mobil kecuali tipe pickup truck.
-    - Dari sudut pengambilan gambar mobil dan motor sudah cukup variatif namun ada yang terlalu jauh sehingga dapat membuat model kesulitan mengenali object.
-    - Dari warna object juga sudah cukup variatif agar model dapat mengenali berbagai macam warna object.
-    - Dari segi background gambar juga sudah sangat variatif dan dapat membantu model belajar mengenali object dengan berbagai macam background.
-    - Ukuran gambar dalam dataset sangat beragam sehingga perlu dilakukan resizing pada saat preprocessing data.
-    - Gambar dalam dataset memiliki 3 jenis color modes sehingga perlu diseragamkan dengan membersihkan dataset dari gambar yang memiliki color modes lain selain RGB.
+    Based on the results of the EDA, the following information was obtained:
+    - The bike dataset is dominated by motorbike types other than scooters and underbones, while the car dataset sufficiently represents various car types and shapes, except for pickup trucks.
+    - The image angles for cars and motorcycles are quite varied, although some are too far away, making it difficult for the model to recognize the objects.
+    - The object colors are sufficiently varied for the model to recognize different object colors.
+    - The backgrounds in the images are also highly varied, helping the model learn to recognize objects in various backgrounds.
+    - The image sizes in the dataset are very diverse, requiring resizing during data preprocessing.
+    - The dataset contains 3 types of color modes, so it needs to be standardized by cleaning the dataset of images with color modes other than RGB.
     """)
 
 if __name__ =='__main__':

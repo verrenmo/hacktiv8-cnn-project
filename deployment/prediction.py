@@ -29,17 +29,17 @@ def run():
     # Create form for user input 
     with st.form(key='formLoanApproval'):
         # Input unggah file gambar
-        uploadFile = st.file_uploader("Silahkan unggah foto yang ingin diprediksi:",type=["jpg", "jpeg", "png"],help="Unggah foto yang ingin diprediski. Format gambar JPG, JPEG atau PNG.")
+        uploadFile = st.file_uploader("Please upload the image you want to predict.",type=["jpg", "jpeg", "png"],help="Please upload the image you want to predict.. Format gambar JPG, JPEG atau PNG.")
 
         st.markdown('---')
         # Predict button
         submitted = st.form_submit_button('Predict')    
 
     if submitted:
-        st.subheader('Gambar anda:')
+        st.subheader('Your image:')
         # Jika gambar belum di upload
         if not uploadFile:  
-            st.warning("Belum ada gambar yang di unggah. Tolong unggah gambar sebelum melanjutkan.")
+            st.warning("No image has been uploaded yet. Please upload the image before proceeding.")
             return
         else:
             def prediction(file):
